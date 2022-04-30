@@ -1,10 +1,11 @@
 version: 0.2
+artifacts:
+  files:
+    - '**/*'
 phases:
   install:
     commands:
       - npm install
       
       - pip install --upgrade awscli
-  artifacts:
-    files:
-      - '**/*'
+
