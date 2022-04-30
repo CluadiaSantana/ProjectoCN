@@ -1,4 +1,4 @@
-sessionStorage.host = "http://127.0.0.1:3000"
+sessionStorage.host = "Proyecto-env-1.eba-vmpmtfgf.us-east-2.elasticbeanstalk.com"
 const imageForm = document.querySelector("#imageForm")
 const imageInput = document.querySelector("#imageInput")
 

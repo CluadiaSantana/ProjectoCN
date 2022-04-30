@@ -1,11 +1,12 @@
 import express from 'express'
 import { generateUploadURL } from './s3.js'
 import { fetchOneByKey } from './s3.js'
+import http from 'http'
 
 const app = express()
 const port=3000
 
-app.use(express.static('../front'))
+app.use(express.static('./front'))
 
 app.get('/s3Url', async (req, res) => {
   const url = await generateUploadURL()
@@ -17,4 +18,4 @@ app.get('/Dyna', async (req, res) => {
   res.send(data)
 })
 
-app.listen(port, () => console.log("listening on port "+ port))
+http.createServer(app).listen(process.env.PORT || 3000)
