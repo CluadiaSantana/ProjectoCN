@@ -7,7 +7,7 @@ imageForm.addEventListener("submit", async event => {
   const file = imageInput.files[0]
 
   // get secure url from our server
-  const { url } = await fetch(`${sessionStorage.host}/s3Url`).then(res => res.json())
+  const { url } = await fetch(`/s3Url`).then(res => res.json())
   console.log(url)
 
   // post the image direclty to the s3 bucket
